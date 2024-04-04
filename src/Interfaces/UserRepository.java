@@ -7,7 +7,7 @@ import Structures.User;
  */
 public interface UserRepository {
     //log in to the system with the given credentials
-    void login(String aUserName, String aPassword);
+    boolean login(String aUserName, String aPassword);
     //log out of the system
     boolean logout();
     //authenticate credentials used for login or payment

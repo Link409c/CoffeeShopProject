@@ -1,6 +1,5 @@
 package Interfaces;
 
-import Structures.Order;
 import Structures.User;
 
 /**
@@ -9,8 +8,8 @@ import Structures.User;
 public interface OrderRepository {
     //update the status of an order
     boolean updateOrderStatus();
-    //get order history for a user
-    String getCustomerHistory(User aUser);
+    //get orders associated with a customer / user
+    String getCustomerOrders(User aUser);
     //get order history for a date
     String getOrdersFromDate(String aDate);
     //get order history for a set time period
