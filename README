@@ -1,0 +1,8 @@
+This is our repository for a POS System designed in the Software Engineering Course at Stockton University.
+
+This repository provides the back-end for the system, built using an object oriented approach in Java.
+
+The objects and data structures are designed to be integrated with a web application on the front-end, as
+well as a database to consolidate and handle Users, Inventory, Menu Items, and Orders.
+
+Refer to each package to view the associated files, separated by their applications.
