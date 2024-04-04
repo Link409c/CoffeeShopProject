@@ -1,0 +1,4 @@
+Within this package are classes designed to integrate a POS System with its associated Database Systems.
+
+Each "service" class contains methods which query a database for some data to be returned and displayed via
+the web application's GUI.

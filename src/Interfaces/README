@@ -1,0 +1,8 @@
+This package contains interfaces designed to create a foundation for a POS System.
+
+They provide CRUD (Create, Read, Update, Delete) functionality to objects which associate with entities in
+a Database System, as well as the functionality of classes to query and update tables and entities in said
+database.
+
+These interfaces should allow a developer to integrate front end and back end operations of their system
+through a database.

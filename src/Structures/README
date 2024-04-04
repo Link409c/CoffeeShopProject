@@ -1,0 +1,5 @@
+Within this package are the Data Structures designed to model each object within our POS System.
+
+Each structure is a simple data container for values and parameters associated with the given object.
+
+These objects will also be associated with tables in the POS's Database System.
