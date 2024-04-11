@@ -7,25 +7,7 @@ import java.util.ArrayList;
 /**
  * an object representing an order placed by a user of a businesses' POS System through a Web App.
  */
-public class Order implements RepositoryInterface<Order>{
-    @Override
-    public boolean addItem(Order order) {
-        return false;
-    }
-
-    @Override
-    public String getDetails(Order order) {
-        return null;
-    }
-
-    @Override
-    public boolean updateItem(Order order) {
-        return false;
-    }
-    @Override
-    public boolean deleteItem(Order order) {
-        return false;
-    }
+public class Order extends Entity<Order>{
 
     private String customerID;
     private ArrayList<Item> items;
