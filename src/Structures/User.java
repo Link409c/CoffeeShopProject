@@ -15,6 +15,15 @@ public class User implements RepositoryInterface<User>{
      */
     @Override
     public boolean addItem(User user) {
+        //try to connect to the database
+            //if established,
+                //call the database function to get the users table
+                //add the passed parameter as a new entity
+                //close the connection
+                //return true
+        //catch a bad connection exception
+            //display an error on the UI
+            //log the bad connection
         return false;
     }
 
@@ -25,6 +34,17 @@ public class User implements RepositoryInterface<User>{
      */
     @Override
     public String getDetails(User user) {
+        //try to connect to the database
+            //if established,
+                //call the database function to get the users table
+                    //if the passed user entity is in the table,
+                        //get the non-secure details as a string to return
+                        //then close the connection.
+                    //else,
+                        //string to return is error message.
+        //catch a bad connection exception
+            //log the bad connection
+            //string to return is error message
         return null;
     }
 
@@ -33,8 +53,20 @@ public class User implements RepositoryInterface<User>{
      * @param user the user to update
      */
     @Override
-    public void updateItem(User user) {
-
+    public boolean updateItem(User user) {
+        //try to connect to the database
+            //if established,
+                //call the database function to get the users table
+                    //if the passed user entity is in the table,
+                        //check each parameter and change the ones that are different.
+                        //then close the connection.
+                        //return true
+                    //else,
+                        //close the connection.
+        //catch a bad connection exception
+            //display an error on the UI
+            //log the bad connection
+        return false;
     }
     /**
      * remove a user from the system.
@@ -43,8 +75,22 @@ public class User implements RepositoryInterface<User>{
      */
     @Override
     public boolean deleteItem(User user) {
+        //try to connect to the database
+            //if established,
+                //call the database function to get the users table
+                    //if the passed user entity is in the table,
+                        //remove it
+                        //then close the connection.
+                        //return true
+            //else,
+                //display message that user is not in system.
+                //close the connection.
+        //catch a bad connection exception
+            //display an error on the UI
+            //log the bad connection
         return false;
     }
+
     private String userName;
     //TODO: implement hashing here to store password securely
     private String password;
