@@ -10,7 +10,7 @@ public interface RepositoryInterface<E> {
     //return the details of an object
     String getDetails(E e);
     //update the details of an object
-    void updateItem(E e);
+    boolean updateItem(E e);
     //delete an object
     boolean deleteItem(E e);
 }

@@ -19,8 +19,8 @@ public class Order implements RepositoryInterface<Order>{
     }
 
     @Override
-    public void updateItem(Order order) {
-
+    public boolean updateItem(Order order) {
+        return false;
     }
     @Override
     public boolean deleteItem(Order order) {

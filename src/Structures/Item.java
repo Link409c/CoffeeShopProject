@@ -32,8 +32,8 @@ public class Item implements RepositoryInterface<Item>{
      * @param item the item to update.
      */
     @Override
-    public void updateItem(Item item) {
-
+    public boolean updateItem(Item item) {
+        return false;
     }
     /**
      * remove an item from the database.
