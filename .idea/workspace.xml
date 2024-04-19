@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dc5e7d52-e3d7-4d6d-b15b-3a8278f8e3de" name="Changes" comment="created entity class as superclass for all objects tracked using relational database. this class implements the repository interface and all methods for CRUD functionality.">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/hibernate_orm_core.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/password4j.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coffee Shop Project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/angus-activation-2.0.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/angus-activation-2.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/antlr4-runtime-4.13.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/antlr4-runtime-4.13.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/byte-buddy-1.14.11-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/byte-buddy-1.14.11.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/classmate-1.5.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/classmate-1.5.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hibernate-commons-annotations-6.0.6.Final-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hibernate-commons-annotations-6.0.6.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hibernate-core-6.4.4.Final-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hibernate-core-6.4.4.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/istack-commons-runtime-4.1.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/istack-commons-runtime-4.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jakarta.activation-api-2.1.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jakarta.activation-api-2.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jakarta.inject-api-2.0.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jakarta.inject-api-2.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jakarta.persistence-api-3.1.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jakarta.persistence-api-3.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jakarta.transaction-api-2.0.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jakarta.transaction-api-2.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jakarta.xml.bind-api-4.0.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jakarta.xml.bind-api-4.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jandex-3.1.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jandex-3.1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jaxb-core-4.0.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jaxb-core-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jaxb-runtime-4.0.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jaxb-runtime-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jboss-logging-3.5.0.Final-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jboss-logging-3.5.0.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/password4j-1.8.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/password4j-1.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/slf4j-api-2.0.12-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/slf4j-api-2.0.12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/txw2-4.0.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/txw2-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Programs/EntityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Programs/HashGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/InventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/InventoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/README" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/RepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/RepositoryInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Programs/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Programs/InventoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Programs/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Programs/ItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Programs/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Programs/MenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Programs/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Programs/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Programs/README" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Programs/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Programs/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Programs/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Structures/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Structures/DatabaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Structures/InventoryItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Structures/InventoryItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Structures/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Structures/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Structures/MenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Structures/MenuItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Structures/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Structures/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Structures/OrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Structures/OrderStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Structures/README" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Structures/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Structures/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Structures/User.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="master" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ebtmiBrMxlE4HKpAlSZWmMjfQy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-18",
+    "last_opened_file_path": "E:/Coding Projects/Coffee Shop Project/src/Structures",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc5e7d52-e3d7-4d6d-b15b-3a8278f8e3de" name="Changes" comment="" />
+      <created>1712185268609</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712185268609</updated>
+    </task>
+    <task id="LOCAL-00001" summary="intial commit. designed interfaces and data structures.">
+      <created>1712197265212</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712197265212</updated>
+    </task>
+    <task id="LOCAL-00002" summary="created service classes, which provide query and update operations for entities and tables in a relational database.">
+      <created>1712200233702</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712200233702</updated>
+    </task>
+    <task id="LOCAL-00003" summary="moved implementation of repository interfaces to service classes">
+      <created>1712200268498</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712200268498</updated>
+    </task>
+    <task id="LOCAL-00004" summary="moved customer order history query method to order interface">
+      <created>1712200299914</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712200299914</updated>
+    </task>
+    <task id="LOCAL-00005" summary="created README file for package.">
+      <created>1712200316438</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712200316438</updated>
+    </task>
+    <task id="LOCAL-00006" summary="updated return type for method signatures">
+      <created>1712853041599</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712853041599</updated>
+    </task>
+    <task id="LOCAL-00007" summary="completed pseudocode for repository interface methods.">
+      <created>1712853071785</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712853071785</updated>
+    </task>
+    <task id="LOCAL-00008" summary="removed interface implementation. reworked as subclass of entity object">
+      <created>1712864284039</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712864284039</updated>
+    </task>
+    <task id="LOCAL-00009" summary="updated class description">
+      <created>1712864301763</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712864301763</updated>
+    </task>
+    <task id="LOCAL-00010" summary="updated class and method names and description">
+      <created>1712864317786</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712864317786</updated>
+    </task>
+    <task id="LOCAL-00011" summary="created entity class as superclass for all objects tracked using relational database. this class implements the repository interface and all methods for CRUD functionality.">
+      <created>1712864369345</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712864369345</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="intial commit. designed interfaces and data structures." />
+    <MESSAGE value="created service classes, which provide query and update operations for entities and tables in a relational database." />
+    <MESSAGE value="moved implementation of repository interfaces to service classes" />
+    <MESSAGE value="moved customer order history query method to order interface" />
+    <MESSAGE value="created README file for package." />
+    <MESSAGE value="updated return type for method signatures" />
+    <MESSAGE value="completed pseudocode for repository interface methods." />
+    <MESSAGE value="removed interface implementation. reworked as subclass of entity object" />
+    <MESSAGE value="updated class description" />
+    <MESSAGE value="updated class and method names and description" />
+    <MESSAGE value="created entity class as superclass for all objects tracked using relational database. this class implements the repository interface and all methods for CRUD functionality." />
+    <option name="LAST_COMMIT_MESSAGE" value="created entity class as superclass for all objects tracked using relational database. this class implements the repository interface and all methods for CRUD functionality." />
+  </component>
+</project>
