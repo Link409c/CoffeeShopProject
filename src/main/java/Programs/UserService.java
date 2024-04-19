@@ -1,10 +1,26 @@
 package Programs;
 
 import Interfaces.UserRepository;
+import Structures.User;
+import org.hibernate.Session;
+
 /**
- * A class used to issue requests to a database handling users of a POS System.
+ * Data Access Object (DAO) used to issue requests to a database handling users of a POS System.
  */
-public class UserService implements UserRepository {
+public class UserService extends EntityService<User> implements UserRepository {
+    /**
+     * Additionally hashes sensitive user information before adding the entity to the database.
+     * @param aUser the user to add
+     * @return true if the entity was added, false if connection fails.
+     */
+    @Override
+    public boolean addEntity(User aUser) {
+        HashGenerator userPassHash = new HashGenerator();
+        //hash user password before committing new entity to table
+        userPassHash.generateHash(aUser);
+        aUser.setPassword(userPassHash.getHashedPass());
+        return super.addEntity(aUser);
+    }
 
     /**
      * log in to the web app using the provided credentials. password is authenticated using
@@ -44,6 +60,10 @@ public class UserService implements UserRepository {
     @Override
     public boolean authorize() {
         return false;
+    }
+
+    public UserService(Session theSession){
+        super(theSession);
     }
 
 }

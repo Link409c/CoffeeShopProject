@@ -7,7 +7,7 @@ import java.util.ArrayList;
 /**
  * an object representing an order placed by a user of a businesses' POS System through a Web App.
  */
-public class Order extends Entity<Order>{
+public class Order extends DatabaseEntity{
 
     private String customerID;
     private ArrayList<Item> items;
