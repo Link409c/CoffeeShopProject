@@ -1,6 +1,6 @@
 package Structures;
 
-import Interfaces.RepositoryInterface;
+import jakarta.persistence.Id;
 
 import java.util.ArrayList;
 
@@ -9,6 +9,8 @@ import java.util.ArrayList;
  */
 public class Order extends DatabaseEntity{
 
+    @Id
+    private String orderID;
     private String customerID;
     private ArrayList<Item> items;
     private int numItems;

@@ -5,7 +5,6 @@ package Structures;
  */
 public class Item extends DatabaseEntity{
 
-
     private String name;
     private int quantity;
 
