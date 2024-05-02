@@ -9,6 +9,7 @@ public class DBTester {
         UserService userService = new UserService(HibernateService.getSessionFactory().getCurrentSession());
         User user = new User(1, "user", "password", "Demo",
                 "abc@123.com", "8561234567");
-        System.out.print(userService.addEntity(user));
+        System.out.println(userService.addEntity(user));
+        //userService.getDetails(user);
     }
 }
