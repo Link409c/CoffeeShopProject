@@ -1,25 +1,53 @@
 package Programs;
 
 import Interfaces.UserRepository;
+import Structures.DatabaseEntity;
 import Structures.User;
 import org.hibernate.Session;
+
+import java.util.List;
 
 /**
  * Data Access Object (DAO) used to issue requests to a database handling users of a POS System.
  */
-public class UserService extends EntityService<User> implements UserRepository {
+public class UserService extends EntityService implements UserRepository {
     /**
      * Additionally hashes sensitive user information before adding the entity to the database.
      * @param aUser the user to add
      * @return true if the entity was added, false if connection fails.
      */
-    @Override
     public boolean addEntity(User aUser) {
         HashGenerator userPassHash = new HashGenerator();
         //hash user password before committing new entity to table
         userPassHash.generateHash(aUser);
         aUser.setPassword(userPassHash.getHashedPass());
         return super.addEntity(aUser);
+    }
+
+    /**
+     * get the non-secure info for a user entity from the database.
+     * @param aUser the user to search for.
+     * @return the information if the entity exists.
+     */
+    public String getDetails(User aUser){
+        List<DatabaseEntity> users = super.getDetails(aUser);
+        if(users == null){
+            return "Database error.";
+        }
+        else {
+            StringBuilder str = new StringBuilder();
+            for (DatabaseEntity d : users) {
+                if (d.equals(aUser)) {
+                    User u = (User) d;
+                    str.append(u.getCustomerName()).append(", ").append(u.getEmail())
+                            .append(", ").append(u.getPhoneNumber());
+                }
+            }
+            if (str.isEmpty()) {
+                str.append("User not found.");
+            }
+            return str.toString();
+        }
     }
 
     /**

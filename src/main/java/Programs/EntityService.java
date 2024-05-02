@@ -3,21 +3,23 @@ package Programs;
 import Interfaces.RepositoryInterface;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import Structures.DatabaseEntity;
+
+import java.util.List;
 
 /**
- * Main superclass of all Data Access Objects in our POS System.
- * @param <E>
+ * Main superclass of all Data Access Objects in our POS System. Handles sessions and transactions.
  */
-public class EntityService<E> implements RepositoryInterface<E> {
+public class EntityService implements RepositoryInterface {
     /**
      * Add a new Entity to the system.
-     * @param e the entity object to add
+     * @param d the entity object to add
      * @return true if the entity is successfully added to the database.
      */
-    public boolean addEntity(E e) {
+    public boolean addEntity(DatabaseEntity d) {
         Transaction transaction = getHibernateSession().beginTransaction();
         try {
-            getHibernateSession().persist(e);
+            getHibernateSession().persist(d);
             transaction.commit();
         } catch(RuntimeException rte) {
             transaction.rollback();
@@ -28,23 +30,25 @@ public class EntityService<E> implements RepositoryInterface<E> {
     }
 
     /**
-     * returns the non-secure Entity parameters.
+     * returns a list of entities from a table. For use in entity-specific overloaded methods.
      * @param e the entity to display
      * @return the details displayed in the app
      */
-    public String getDetails(E e) {
-        //try to connect to the database
-        //if established,
-        //call the database method to get the associated table
-        //if the passed entity is in the table,
-        //get the non-secure details as a string to return
-        //else,
-        //string to return is error message.
-        //then close the connection.
-        //catch a bad connection exception
-        //log the bad connection
-        //string to return is error message
-        return null;
+    public List<DatabaseEntity> getDetails(DatabaseEntity e) {
+        Transaction transaction = getHibernateSession().beginTransaction();
+        List<DatabaseEntity> details;
+        try {
+            //get the table name from object name
+            String tableName = e.getTableName();
+            //make a list using the table entities
+            details = getHibernateSession().createQuery("from " + tableName, DatabaseEntity.class).getResultList();
+            transaction.commit();
+        } catch(RuntimeException rte) {
+            transaction.rollback();
+            return null;
+        }
+        getHibernateSession().close();
+        return details;
     }
 
     /**
@@ -52,7 +56,7 @@ public class EntityService<E> implements RepositoryInterface<E> {
      * @param e the entity to update
      * @return true if any details were updated successfully
      */
-    public boolean updateEntity(E e) {
+    public boolean updateEntity(DatabaseEntity e) {
         //try to connect to the database
         //if established,
         //call the database method to get the associated table
@@ -79,7 +83,7 @@ public class EntityService<E> implements RepositoryInterface<E> {
      * Need to account for cascading deletes and / or parent-child dependencies in
      * removing entities from the database
      */
-    public boolean deleteEntity(E e) {
+    public boolean deleteEntity(DatabaseEntity e) {
         //try to connect to the database
         //if established,
         //call the database method to get the associated table

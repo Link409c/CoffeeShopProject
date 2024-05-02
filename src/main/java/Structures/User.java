@@ -2,45 +2,37 @@ package Structures;
 
 //ORM using Hibernate
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-
-import java.util.ArrayList;
 
 /**
  * Represents a regular user of the Web Application.
  */
-@Entity
-@Table(name = "user")
+@Table (name = "user")
 public class User extends DatabaseEntity{
 
     @Id
-    @Column(name = "ID", nullable = false)
+    @Column(name = "id", nullable = false)
     private int userID;
-    @Column(name = "NAME", nullable = false)
+    @Column(name = "name", nullable = false)
     private String userName;
     @Column(name = "password", nullable = false)
     private String password;
+    @Column(name = "custName")
+    private String customerName;
     @Column(name = "email address")
     private String email;
-    @Column(name = "favorites")
-    private ArrayList<MenuItem> favorites;
-    @Column(name = "past orders")
-    private ArrayList<Order> previousOrders;
-    //TODO: implement hashing here to securely store card info
-    @Column(name = "saved payments")
-    private ArrayList<String> payments;
+    @Column(name = "phone")
+    private String phoneNumber;
 
-    public User(int userID, String userName, String password, String email, ArrayList<MenuItem> favorites,
-                ArrayList<Order> previousOrders, ArrayList<String> payments) {
+    public User(int userID, String userName, String password, String customerName, String email, String phone) {
+        super("user");
         this.userID = userID;
         this.userName = userName;
+        this.customerName = customerName;
         this.password = password;
         this.email = email;
-        this.favorites = favorites;
-        this.previousOrders = previousOrders;
-        this.payments = payments;
+        this.phoneNumber = phone;
     }
 
     public int getUserID() {
@@ -67,30 +59,6 @@ public class User extends DatabaseEntity{
         this.email = email;
     }
 
-    public ArrayList<MenuItem> getFavorites() {
-        return favorites;
-    }
-
-    public void setFavorites(ArrayList<MenuItem> favorites) {
-        this.favorites = favorites;
-    }
-
-    public ArrayList<Order> getPreviousOrders() {
-        return previousOrders;
-    }
-
-    public void setPreviousOrders(ArrayList<Order> previousOrders) {
-        this.previousOrders = previousOrders;
-    }
-
-    public ArrayList<String> getPayments() {
-        return payments;
-    }
-
-    public void setPayments(ArrayList<String> payments) {
-        this.payments = payments;
-    }
-
     public String getPassword(){
         return password;
     }
@@ -99,4 +67,19 @@ public class User extends DatabaseEntity{
         this.password = aPassword;
     }
 
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 }
