@@ -1,0 +1,94 @@
+@font-face{
+    font-family: Silkscreen;
+    src: url(slkscrb.ttf);
+}
+
+a:link{
+  color: #333;;
+  text-decoration: none;
+}
+
+a:visited{
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #333;
+  text-decoration: none;
+}
+
+a:active{
+  color: #333;
+  text-decoration: none;
+}
+
+body{
+    background-color: #ffffcc;
+    color: #330000;
+    font-family: Silkscreen;
+    font-size: small;
+  }
+
+  #container{
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 480px;
+    width: 750px;
+    border-style: solid;
+    padding: 0px;
+  }
+
+  #logo{
+    background-color: #ccaa66;
+    text-align: center;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    height: 80px;
+    margin: 0px;
+  }
+
+  #leftcolumn{
+    background-color: #e8d882;
+    position: relative;
+    padding-left: 20px;
+    left: 0px;
+    width: 130px;
+    height: 320px;
+    float: left;
+    white-space: pre-line;
+  }
+
+  #navBar{
+    text-align: left;
+    height: 4px;
+    width: 10px;
+    border: 2px;
+    background-color: #ccaa66;
+  }
+
+  #rightcolumn{
+    background-color: #f1e8b0;
+    position: relative;
+    width: 580px;
+    height: 300px;
+    padding: 10px;
+    float: right;
+  }
+
+  #CoffeePic{
+    position: absolute;
+    right: 20px;
+  }
+
+  #footer{
+    background-color: #ccaa66;
+    border-top-style: solid;
+    height: 62px;
+    text-align: center;
+    font-style: italic;
+    width: 750px;
+    margin-top: 320px;
+    padding-top: 10px;
+  }

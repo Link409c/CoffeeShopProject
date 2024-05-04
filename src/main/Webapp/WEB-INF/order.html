@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .menu-item {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .menu-item h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        .menu-item p {
+            color: #666;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Menu</h1>
+        
+        <div class="menu-item" id="espresso">
+            <h2>Espresso</h2>
+            <p>A strong shot of coffee made by forcing hot water through finely-ground coffee beans.</p>
+            <button onclick="addToCart('Espresso')">Add to Cart</button>
+        </div>
+
+        <div class="menu-item" id="cappuccino">
+            <h2>Cappuccino</h2>
+            <p>Equal parts espresso, steamed milk, and milk foam, creating a creamy and frothy delight.</p>
+            <button onclick="addToCart('Cappuccino')">Add to Cart</button>
+        </div>
+
+        <div class="menu-item" id="latte">
+            <h2>Latte</h2>
+            <p>Espresso mixed with steamed milk and topped with a small amount of milk foam.</p>
+            <button onclick="addToCart('Latte')">Add to Cart</button>
+        </div>
+
+        <div class="menu-item" id="americano">
+            <h2>Americano</h2>
+            <p>A shot or two of espresso diluted with hot water, resulting in a milder flavor.</p>
+            <button onclick="addToCart('Americano')">Add to Cart</button>
+        </div>
+
+        <div class="menu-item" id="mocha">
+            <h2>Mocha</h2>
+            <p>Espresso mixed with hot chocolate and topped with steamed milk and foam.</p>
+            <button onclick="addToCart('Mocha')">Add to Cart</button>
+        </div>
+
+        <h2>Cart</h2>
+        <ul id="cart"></ul>
+    </div>
+
+    <script>
+        function addToCart(item) {
+            var cart = document.getElementById("cart");
+            var listItem = document.createElement("li");
+            listItem.textContent = item;
+            cart.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

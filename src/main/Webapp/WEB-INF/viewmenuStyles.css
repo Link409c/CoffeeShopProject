@@ -1,0 +1,66 @@
+@font-face{
+    font-family: Silkscreen;
+    src: url(slkscrb.ttf);
+}
+
+a:link{
+    color: #333;;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #333;
+    text-decoration: none;
+}
+
+a:active{
+    color: #333;
+    text-decoration: none;
+}
+
+body {
+    font-family: Silkscreen;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffcc;
+}
+.container {
+    background-color: #ccaa66;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.menu-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #e8d882;
+}
+.menu-item h2 {
+    color: #333;
+    margin-top: 0;
+}
+.menu-item p {
+    color: #666;
+}
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+}
