@@ -2,12 +2,14 @@ package Structures;
 
 //ORM using Hibernate
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 /**
  * Represents a regular user of the Web Application.
  */
+@Entity
 @Table (name = "user")
 public class User extends DatabaseEntity{
 
@@ -25,6 +27,7 @@ public class User extends DatabaseEntity{
     @Column(name = "phone")
     private String phoneNumber;
 
+    public User(){}
     public User(int userID, String userName, String password, String customerName, String email, String phone) {
         super("user");
         this.userID = userID;

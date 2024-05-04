@@ -1,6 +1,10 @@
 package Programs;
 
 import Interfaces.RepositoryInterface;
+import Structures.User;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import Structures.DatabaseEntity;
@@ -22,6 +26,7 @@ public class EntityService implements RepositoryInterface {
             getHibernateSession().persist(d);
             transaction.commit();
         } catch(RuntimeException rte) {
+            rte.printStackTrace();
             transaction.rollback();
             return false;
         }
